@@ -11,7 +11,7 @@ syntax on
 let mapleader=";"
 
 " === Colorscheme ===
-color peachpuff
+color desert
 
 " === Useless left pad for aesthetic
 set foldcolumn=2
