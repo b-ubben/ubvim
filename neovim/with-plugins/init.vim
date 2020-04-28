@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'prettier/vim-prettier'
 Plug 'w0rp/ale'
 Plug 'jhawthorn/fzy'
 Plug 'cloudhead/neovim-fuzzy'
