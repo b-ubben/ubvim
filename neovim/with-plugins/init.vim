@@ -19,7 +19,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'w0rp/ale'
 Plug 'jhawthorn/fzy'
 Plug 'cloudhead/neovim-fuzzy'
-" Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'joshdick/onedark.vim'
 Plug 'tmsvg/pear-tree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -85,7 +84,7 @@ set omnifunc=syntaxcomplete#Complete
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:netrw_altv=1
-let g:netrw_winsize=25
+let g:netrw_winsize=20
 let g:netrw_browse_split=4
 
 " === Delete dirs too ===
@@ -118,15 +117,13 @@ let g:pear_tree_smart_backspace = 0
 " ====================
 "     Coc.nvim  
 " ====================
-" TextEdit might fail if hidden is not set.
-set hidden
 
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+" set cmdheight=0
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -179,3 +176,4 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
