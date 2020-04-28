@@ -107,7 +107,7 @@ let g:lightline = {
 nnoremap <C-p> :FuzzyOpen<CR>
 
 " ====================
-"     Pear Tree 
+"       Pear Tree 
 " ====================
 
 let g:pear_tree_smart_openers = 0
@@ -115,7 +115,19 @@ let g:pear_tree_smart_closers = 0
 let g:pear_tree_smart_backspace = 0
 
 " ====================
-"     Coc.nvim  
+"         ALE 
+" ====================
+
+" Fix files with prettier, and then ESLint.
+let b:ale_fixers = ['prettier', 'eslint']
+" Equivalent to the above.
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
+
+" ====================
+"       Coc.nvim  
 " ====================
 
 " Some servers have issues with backup files, see #649.
