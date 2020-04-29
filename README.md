@@ -9,4 +9,8 @@ Meant to be available for me to pull down onto whatever server I'd like
 and provide a working VIM config in the case of me having to write
 scripts, etc.
 
-### INSPIRATION CAME FROM ALL AROUND GOOGLE ###
+## UPDATED 4/28/20
+added configurations for neovim w/plugins to suit front end development in JS/TS, etc.
+
+also added install scripts (that are mostly untested -- if you care to use them, they're pretty simple).
+
