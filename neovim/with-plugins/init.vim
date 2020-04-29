@@ -16,7 +16,10 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'w0rp/ale'
 Plug 'jhawthorn/fzy'
 Plug 'cloudhead/neovim-fuzzy'
@@ -114,6 +117,14 @@ nnoremap <C-p> :FuzzyOpen<CR>
 let g:pear_tree_smart_openers = 0
 let g:pear_tree_smart_closers = 0
 let g:pear_tree_smart_backspace = 0
+
+" ====================
+"         Prettier 
+" ====================
+
+let g:prettier#config#single_quote = get(g:,'prettier#config#single_quote', 'true')
+let g:prettier#config#trailing_comma = get(g:,'prettier#config#trailing_comma', 'es5')
+let g:prettier#autoformat = get(g:, 'prettier#autoformat', 1)
 
 " ====================
 "         ALE 
