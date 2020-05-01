@@ -22,6 +22,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'w0rp/ale'
 Plug 'jhawthorn/fzy'
+Plug 'alvan/vim-closetag'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'joshdick/onedark.vim'
 Plug 'tmsvg/pear-tree'
@@ -119,12 +120,23 @@ let g:pear_tree_smart_closers = 0
 let g:pear_tree_smart_backspace = 0
 
 " ====================
-"         Prettier 
+"       Prettier 
 " ====================
 
 let g:prettier#config#single_quote = get(g:,'prettier#config#single_quote', 'true')
 let g:prettier#config#trailing_comma = get(g:,'prettier#config#trailing_comma', 'es5')
-let g:prettier#autoformat = get(g:, 'prettier#autoformat', 1)
+let g:prettier#config#print_width = get(g:, 'prettier#config#print_width', 100)
+
+
+" ====================
+"       closetag 
+" ====================
+
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.tsx,*.njk,*.vue'
+let g:closetag_xhtml_filenames = '*.js,*.jsx,*.tsx'
+let g:closetag_filetypes = 'html,js,jsx,tsx,vue,njk'
+let g:closetag_xhtml_filetypes = 'js,jsx,tsx'
+let g:closetag_shortcut = '>'
 
 " ====================
 "         ALE 
