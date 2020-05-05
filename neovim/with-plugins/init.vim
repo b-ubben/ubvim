@@ -218,3 +218,6 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " ====================
 
 nnoremap <leader>t :sp \| term<CR>
+nnoremap <leader>T :vsp \| term<CR>
+nnoremap <leader>h :sp \| enew<CR>
+nnoremap <leader>v :vsp \| enew<CR>
