@@ -37,8 +37,10 @@ let mapleader=";"
 set showmode
 set showmatch
 
-" === Hide line numbers and use ruler ===
+" === Set line numbers and use ruler ===
 set ruler
+set number
+set relativenumber
 
 " === Wildmenu ===
 set wildmenu
@@ -148,7 +150,7 @@ let b:ale_fixers = ['prettier', 'eslint']
 let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
 
 " Set this variable to 1 to fix files when you save them.
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 " ====================
 "       Coc.nvim  
@@ -157,9 +159,6 @@ let g:ale_fix_on_save = 1
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
-
-" Give more space for displaying messages.
-" set cmdheight=0
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
