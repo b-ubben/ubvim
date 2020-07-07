@@ -24,10 +24,12 @@ Plug 'w0rp/ale'
 Plug 'jhawthorn/fzy'
 Plug 'alvan/vim-closetag'
 Plug 'cloudhead/neovim-fuzzy'
-Plug 'joshdick/onedark.vim'
+Plug 'nanotech/jellybeans.vim'
 Plug 'tmsvg/pear-tree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 call plug#end()
 
 " === Change leader to something better
@@ -100,15 +102,10 @@ let g:netrw_localrmdir='rm -rf'
 " === Bind file exlporer to <Leader>n
 nnoremap <leader>n :Lexplore<CR>
 
-colorscheme onedark
-let g:onedark_termcolors=256
 set syntax 
-set background=dark
-
-" lightline
-let g:lightline = {
-      \ 'colorscheme': 'onedark',
-      \ }
+set t_Co=256
+colorscheme jellybeans
+let g:jellybeans_use_term_italics = 1
 
 " Fuzzy
 nnoremap <C-p> :FuzzyOpen<CR>
@@ -120,6 +117,21 @@ nnoremap <C-p> :FuzzyOpen<CR>
 let g:pear_tree_smart_openers = 0
 let g:pear_tree_smart_closers = 0
 let g:pear_tree_smart_backspace = 0
+
+" ====================
+"   Goyo/Limelight
+" ====================
+
+" Width
+let g:goyo_width = 100
+
+" Conceal color
+let g:limelight_conceal_ctermfg = 238
+let g:limelight_paragraph_span = 1
+
+" Bind to limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " ====================
 "       Prettier 
@@ -208,3 +220,5 @@ nnoremap <leader>t :sp \| term<CR>
 nnoremap <leader>T :vsp \| term<CR>
 nnoremap <leader>h :sp \| enew<CR>
 nnoremap <leader>v :vsp \| enew<CR>
+
+nnoremap <leader>z :Goyo<CR>
