@@ -127,7 +127,6 @@ let g:goyo_width = 100
 
 " Conceal color
 let g:limelight_conceal_ctermfg = 238
-let g:limelight_paragraph_span = 1
 
 " Bind to limelight
 autocmd! User GoyoEnter Limelight
