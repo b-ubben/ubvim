@@ -24,7 +24,7 @@ Plug 'w0rp/ale'
 Plug 'jhawthorn/fzy'
 Plug 'alvan/vim-closetag'
 Plug 'cloudhead/neovim-fuzzy'
-Plug 'nanotech/jellybeans.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tmsvg/pear-tree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
@@ -103,9 +103,10 @@ let g:netrw_localrmdir='rm -rf'
 nnoremap <leader>n :Lexplore<CR>
 
 set syntax 
-set t_Co=256
-colorscheme jellybeans
-let g:jellybeans_use_term_italics = 1
+colorscheme dracula
+if has('termguicolors')
+  set termguicolors
+endif
 
 " Fuzzy
 nnoremap <C-p> :FuzzyOpen<CR>
